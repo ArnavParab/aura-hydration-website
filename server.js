@@ -388,7 +388,25 @@ app.get('/api/stats', (req, res) => {
 // ==========================================================================
 
 // Serve static files from workspace
-app.use(express.static(__dirname));
+// STATIC FRONTEND & ADMIN DASHBOARD SERVING
+
+// Serve static files from current directory
+app.use(express.static(path.join(__dirname)));
+
+// Serve index.html for root path
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Serve admin dashboard
+app.get('/admin', (req, res) => {
+  res.sendFile(path.join(__dirname, 'admin.html'));
+});
+
+// Fallback: serve index.html for any unmatched routes (SPA fallback)
+app.use((req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // Serve Admin Dashboard page at /admin
 app.get('/admin', (req, res) => {
