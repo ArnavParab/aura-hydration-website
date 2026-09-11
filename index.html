@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA | Hydration Engineered for Life — Premium Insulated & Smart Bottles</title>
+  <meta name="description" content="Discover AURA high-performance insulated and smart self-cleaning water bottles. Keeps ice-cold for 36 hours, piping-hot for 18 hours. 100% leakproof, BPA-free, lifetime warranty." />
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="container announcement-content">
+      <span class="announcement-tag">LIMITED OFFER</span>
+      <p class="announcement-text">
+        ✨ Free Worldwide Shipping on orders over $50 | Use code <strong class="promo-pill" id="copyPromo">AURA15</strong> for 15% OFF
+      </p>
+      <button class="announcement-close" id="closeAnnouncement" aria-label="Close Announcement">&times;</button>
+    </div>
+  </div>
+
+  <!-- Main Header & Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="#" class="brand-logo" aria-label="AURA Home">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+          </svg>
+        </span>
+        <span class="logo-text">AURA<span class="logo-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="navMenu">
+        <a href="#customizer" class="nav-item">Customizer Studio</a>
+        <a href="#products" class="nav-item">Collections</a>
+        <a href="#thermal-sim" class="nav-item">36h Cold Tech</a>
+        <a href="#technology" class="nav-item">Engineering</a>
+        <a href="#eco-impact" class="nav-item">Eco Impact</a>
+        <a href="#reviews" class="nav-item">Reviews</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="icon-btn search-toggle-btn" id="searchToggle" aria-label="Search Products">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button class="cart-trigger-btn" id="cartToggle" aria-label="Open Shopping Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count" id="cartCountBadge">0</span>
+        </button>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            <span>NEXT-GEN INSULATION ARCHITECTURE</span>
+          </div>
+          <h1 class="hero-title">
+            Hydration, <span class="gradient-text">Engineered</span> For Pure Performance.
+          </h1>
+          <p class="hero-description">
+            Experience aerospace-grade triple-wall vacuum insulation. Zero metallic aftertaste, 
+            36 hours ice-cold retention, and optional intelligent UV-C self-cleaning at the tap of a lid.
+          </p>
+
+          <!-- Key Metrics -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-value">36h</span>
+              <span class="metric-label">Ice Cold</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-value">18h</span>
+              <span class="metric-label">Piping Hot</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-value">100%</span>
+              <span class="metric-label">Leakproof</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-value">18/8</span>
+              <span class="metric-label">Pro Steel</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#customizer" class="btn btn-primary btn-glow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+              Customize Your Bottle
+            </a>
+            <a href="#products" class="btn btn-outline">
+              Shop Collections
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="hero-trust">
+            <div class="trust-stars">
+              ★★★★★
+            </div>
+            <span><strong>4.9/5</strong> Rating from 45,000+ Hydrated Adventurers & Athletes</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual">
+          <div class="hero-bottle-card">
+            <div class="floating-tag tag-top-left">
+              <span class="icon">❄️</span>
+              <div>
+                <strong>36H FrostLock™</strong>
+                <small>Triple-layer barrier</small>
+              </div>
+            </div>
+
+            <div class="floating-tag tag-bottom-right">
+              <span class="icon">🛡️</span>
+              <div>
+                <strong>PureTaste™ Ceramic</strong>
+                <small>Zero steel flavor</small>
+              </div>
+            </div>
+
+            <!-- Hero Bottle Image Showcase -->
+            <div class="hero-img-container">
+              <img 
+                src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=85" 
+                alt="AURA Premium Matte Insulated Bottle" 
+                class="hero-bottle-image active" 
+                id="heroMainImage"
+              />
+              <div class="hero-bottle-glow"></div>
+            </div>
+
+            <!-- Quick Color Preview for Hero -->
+            <div class="hero-quick-swatches">
+              <span>Quick Finishes:</span>
+              <div class="swatches-row" id="heroSwatches">
+                <button class="swatch-dot active" data-color="#1c1d22" data-name="Obsidian Black" title="Obsidian Black" style="background: #1c1d22;"></button>
+                <button class="swatch-dot" data-color="#e8ebed" data-name="Arctic Frost" title="Arctic Frost" style="background: #e8ebed;"></button>
+                <button class="swatch-dot" data-color="#3d5a45" data-name="Alpine Sage" title="Alpine Sage" style="background: #3d5a45;"></button>
+                <button class="swatch-dot" data-color="#c48259" data-name="Terracotta Sand" title="Terracotta Sand" style="background: #c48259;"></button>
+                <button class="swatch-dot" data-color="#3a86ff" data-name="Pacific Cobalt" title="Pacific Cobalt" style="background: #3a86ff;"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof / Press Bar -->
+    <section class="press-bar">
+      <div class="container">
+        <p class="press-title">AS FEATURED IN GLOBAL INNOVATION & WELLNESS PRESS</p>
+        <div class="press-logos">
+          <span class="press-item">WIRED</span>
+          <span class="press-item">GQ MAGAZINE</span>
+          <span class="press-item">VOGUE WELLNESS</span>
+          <span class="press-item">GEAR PATROL</span>
+          <span class="press-item">FAST COMPANY</span>
+          <span class="press-item">MEN'S HEALTH</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Bottle Customizer Studio -->
+    <section class="customizer-section" id="customizer">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">INTERACTIVE LAB</span>
+          <h2 class="section-title">Build Your Signature Bottle</h2>
+          <p class="section-subtitle">
+            Configure your capacity, cap architecture, signature powder-coat hue, and engrave your custom monogram.
+          </p>
+        </div>
+
+        <div class="customizer-grid">
+          <!-- Live Interactive Vector Render Stage -->
+          <div class="customizer-stage-card">
+            <div class="stage-watermark">AURA 2026</div>
+
+            <div class="bottle-render-container" id="bottleStage">
+              <!-- Dynamic SVG Bottle Vessel with Realtime Lighting & Engraving -->
+              <svg id="customizerSvg" class="customizer-svg" viewBox="0 0 320 620" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <!-- Dynamic Body Gradient that adapts to selected color -->
+                  <linearGradient id="bottleBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#111317" id="bodyGradStop1" />
+                    <stop offset="25%" stop-color="#2a2e39" id="bodyGradStop2" />
+                    <stop offset="50%" stop-color="#3f4555" id="bodyGradStop3" />
+                    <stop offset="75%" stop-color="#252933" id="bodyGradStop4" />
+                    <stop offset="100%" stop-color="#0f1115" id="bodyGradStop5" />
+                  </linearGradient>
+
+                  <!-- Metallic Collar Gradient -->
+                  <linearGradient id="metalCollar" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#8c92a4" />
+                    <stop offset="40%" stop-color="#e2e8f0" />
+                    <stop offset="70%" stop-color="#94a3b8" />
+                    <stop offset="100%" stop-color="#475569" />
+                  </linearGradient>
+
+                  <!-- Cap Accent Gradient -->
+                  <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#181a20" />
+                    <stop offset="50%" stop-color="#2f3441" />
+                    <stop offset="100%" stop-color="#121418" />
+                  </linearGradient>
+
+                  <!-- Specular Glass/Metallic Sheen -->
+                  <linearGradient id="sheen" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
+                    <stop offset="40%" stop-color="#ffffff" stop-opacity="0.05" />
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                  </linearGradient>
+
+                  <!-- Soft Drop Shadow -->
+                  <filter id="bottleShadow" x="-20%" y="-10%" width="140%" height="130%">
+                    <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="rgba(0,0,0,0.55)" />
+                  </filter>
+                </defs>
+
+                <!-- Ground Shadow Ellipse -->
+                <ellipse cx="160" cy="590" rx="90" ry="14" fill="rgba(0,0,0,0.35)" filter="blur(8px)" />
+
+                <!-- Cap Container (swapped via JS) -->
+                <g id="capGroup" transform="translate(0, 0)">
+                  <!-- Straw / Loop Cap Default -->
+                  <path id="capLoopPath" d="M 125 70 C 125 35, 195 35, 195 70" fill="none" stroke="#232731" stroke-width="16" stroke-linecap="round" />
+                  <path id="capLoopAccent" d="M 127 68 C 127 38, 193 38, 193 68" fill="none" stroke="url(#metalCollar)" stroke-width="4" stroke-linecap="round" opacity="0.4" />
+
+                  <!-- Cap Body Base -->
+                  <rect id="capBaseRect" x="115" y="70" width="90" height="42" rx="8" fill="url(#capGrad)" />
+                  <!-- Grip Ridges -->
+                  <g id="capRidges">
+                    <line x1="125" y1="75" x2="125" y2="105" stroke="#3d4353" stroke-width="2" />
+                    <line x1="135" y1="75" x2="135" y2="105" stroke="#3d4353" stroke-width="2" />
+                    <line x1="185" y1="75" x2="185" y2="105" stroke="#3d4353" stroke-width="2" />
+                    <line x1="195" y1="75" x2="195" y2="105" stroke="#3d4353" stroke-width="2" />
+                  </g>
+
+                  <!-- UV Cap Status Ring (Light indicator) -->
+                  <circle id="uvCapLight" cx="160" cy="91" r="5" fill="#3b82f6" opacity="0" />
+                </g>
+
+                <!-- Brushed Steel Collar Ring -->
+                <rect x="110" y="112" width="100" height="14" rx="3" fill="url(#metalCollar)" />
+
+                <!-- Main Bottle Vessel Body -->
+                <g id="bottleBodyGroup">
+                  <!-- Bottle Shoulder & Main Cylinder -->
+                  <path id="bottlePath" d="
+                    M 116 126
+                    L 204 126
+                    C 214 126, 230 148, 234 175
+                    C 236 190, 236 210, 236 220
+                    L 236 530
+                    C 236 555, 218 565, 190 565
+                    L 130 565
+                    C 102 565, 84 555, 84 530
+                    L 84 220
+                    C 84 210, 84 190, 86 175
+                    C 90 148, 106 126, 116 126
+                    Z
+                  " fill="url(#bottleBodyGrad)" filter="url(#bottleShadow)" />
+
+                  <!-- Gloss Highlight Curve Overlay -->
+                  <path id="glossHighlight" d="
+                    M 96 175
+                    C 92 195, 92 520, 104 545
+                    C 94 535, 88 510, 88 220
+                    C 88 190, 92 165, 96 175
+                    Z
+                  " fill="#ffffff" opacity="0.18" />
+
+                  <!-- Sheen Mask Layer -->
+                  <rect id="sheenRect" x="84" y="126" width="152" height="439" fill="url(#sheen)" rx="16" opacity="0.4" style="pointer-events: none;" />
+
+                  <!-- Brand AURA Logo on Vessel -->
+                  <g id="auraVesselLogo" transform="translate(160, 480)">
+                    <text text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="700" font-size="15" fill="rgba(255,255,255,0.35)" letter-spacing="4">A U R A</text>
+                  </g>
+
+                  <!-- Custom Laser Engraved Monogram / Text -->
+                  <g id="engravingGroup" transform="translate(160, 340)">
+                    <text 
+                      id="svgEngravingText" 
+                      text-anchor="middle" 
+                      font-family="'Inter', sans-serif" 
+                      font-weight="600" 
+                      font-size="14" 
+                      fill="rgba(255, 255, 255, 0.75)" 
+                      letter-spacing="2.5"
+                      transform="rotate(-90)"
+                    >YOUR NAME</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Stage Control Footer -->
+            <div class="stage-footer">
+              <div class="stage-specs">
+                <span id="stageCapacityBadge">750ml / 25oz</span>
+                <span id="stageCapBadge">Straw Sport Lid</span>
+                <span id="stageColorBadge">Obsidian Black</span>
+              </div>
+              <div class="stage-temperature-preview">
+                <span class="temp-cold">❄️ 36h Cold</span>
+                <span class="temp-hot">🔥 18h Hot</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Configurator Panel -->
+          <div class="customizer-controls-card">
+            <div class="controls-header">
+              <h3 class="controls-title">Vessel Configurator</h3>
+              <div class="controls-price" id="configuratorTotalPrice">$42.00</div>
+            </div>
+
+            <!-- Step 1: Bottle Silhouette / Capacity -->
+            <div class="config-step">
+              <label class="step-label">
+                <span class="step-num">1</span>
+                <span>Select Vessel Silhouette & Volume</span>
+              </label>
+              <div class="model-options-grid">
+                <button class="model-card active" data-model="daily" data-capacity="750ml / 25oz" data-baseprice="42">
+                  <span class="model-name">The Daily</span>
+                  <span class="model-vol">750ml (25oz)</span>
+                  <span class="model-price">$42</span>
+                </button>
+                <button class="model-card" data-model="explorer" data-capacity="1200ml / 40oz" data-baseprice="54">
+                  <span class="model-name">The Explorer</span>
+                  <span class="model-vol">1200ml (40oz)</span>
+                  <span class="model-price">$54</span>
+                </button>
+                <button class="model-card" data-model="uvpure" data-capacity="600ml / 20oz" data-baseprice="78">
+                  <span class="model-badge">UV SMART</span>
+                  <span class="model-name">The UV-Pure</span>
+                  <span class="model-vol">600ml (20oz)</span>
+                  <span class="model-price">$78</span>
+                </button>
+                <button class="model-card" data-model="tumbler" data-capacity="900ml / 30oz" data-baseprice="48">
+                  <span class="model-name">Aero Tumbler</span>
+                  <span class="model-vol">900ml (30oz)</span>
+                  <span class="model-price">$48</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Signature Powder Coat Color -->
+            <div class="config-step">
+              <div class="step-label-row">
+                <label class="step-label">
+                  <span class="step-num">2</span>
+                  <span>Signature Powder Coat Finish</span>
+                </label>
+                <span class="selected-color-name" id="selectedColorName">Obsidian Black</span>
+              </div>
+              <div class="color-palette-selector" id="colorPalette">
+                <button class="color-swatch-item active" data-name="Obsidian Black" data-color="#14171d" data-c1="#0f1115" data-c2="#20242e" data-c3="#323847" data-c4="#1b1f28" data-c5="#0a0c0e" title="Obsidian Black">
+                  <span class="swatch-circle" style="background: #14171d;"></span>
+                </button>
+                <button class="color-swatch-item" data-name="Arctic Frost" data-color="#e4e8ec" data-c1="#b8c0c8" data-c2="#dde2e8" data-c3="#f4f7fa" data-c4="#cbd2db" data-c5="#9ea7b3" title="Arctic Frost">
+                  <span class="swatch-circle" style="background: #e4e8ec; border: 1px solid #cbd5e1;"></span>
+                </button>
+                <button class="color-swatch-item" data-name="Alpine Sage" data-color="#364e3c" data-c1="#1d2e22" data-c2="#334b39" data-c3="#4b6d54" data-c4="#2b3f30" data-c5="#16221a" title="Alpine Sage">
+                  <span class="swatch-circle" style="background: #364e3c;"></span>
+                </button>
+                <button class="color-swatch-item" data-name="Terracotta Sand" data-color="#bd6d4c" data-c1="#7c3d25" data-c2="#ad5c3b" data-c3="#cf7f5c" data-c4="#994d2f" data-c5="#5a2916" title="Terracotta Sand">
+                  <span class="swatch-circle" style="background: #bd6d4c;"></span>
+                </button>
+                <button class="color-swatch-item" data-name="Pacific Cobalt" data-color="#1d5bc7" data-c1="#0f3473" data-c2="#1b53b8" data-c3="#3674e8" data-c4="#16469c" data-c5="#0b2450" title="Pacific Cobalt">
+                  <span class="swatch-circle" style="background: #1d5bc7;"></span>
+                </button>
+                <button class="color-swatch-item" data-name="Cyber Lime" data-color="#76b82a" data-c1="#3a6410" data-c2="#66a320" data-c3="#8ed338" data-c4="#568c19" data-c5="#254207" title="Cyber Lime">
+                  <span class="swatch-circle" style="background: #76b82a;"></span>
+                </button>
+                <button class="color-swatch-item" data-name="Rose Quartz" data-color="#d48a97" data-c1="#8a4d58" data-c2="#bf7381" data-c3="#e69faa" data-c4="#aa606e" data-c5="#62323b" title="Rose Quartz">
+                  <span class="swatch-circle" style="background: #d48a97;"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Cap Architecture -->
+            <div class="config-step">
+              <label class="step-label">
+                <span class="step-num">3</span>
+                <span>Select Cap Architecture</span>
+              </label>
+              <div class="caps-selector-grid">
+                <button class="cap-option-card active" data-cap="straw" data-capprice="0">
+                  <span class="cap-title">Straw Sports Lid</span>
+                  <span class="cap-desc">Flip straw with comfort carry loop</span>
+                  <span class="cap-cost">Included</span>
+                </button>
+                <button class="cap-option-card" data-cap="twist" data-capprice="0">
+                  <span class="cap-title">Chug Twist Cap</span>
+                  <span class="cap-desc">High-flow pour with magnetic cap keeper</span>
+                  <span class="cap-cost">Included</span>
+                </button>
+                <button class="cap-option-card" data-cap="uvsmart" data-capprice="35">
+                  <span class="cap-badge">SMART</span>
+                  <span class="cap-title">UV-C Sanitizing Cap</span>
+                  <span class="cap-desc">Kills 99.99% bacteria at the touch of a button</span>
+                  <span class="cap-cost">+$35</span>
+                </button>
+                <button class="cap-option-card" data-cap="infuser" data-capprice="8">
+                  <span class="cap-title">Fruit Infuser Cap</span>
+                  <span class="cap-desc">Fine stainless mesh for fruit & tea infusion</span>
+                  <span class="cap-cost">+$8</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4: Custom Laser Engraving -->
+            <div class="config-step">
+              <div class="step-label-row">
+                <label class="step-label">
+                  <span class="step-num">4</span>
+                  <span>Personalized Laser Engraving</span>
+                </label>
+                <span class="engraving-cost-tag">FREE PROMO</span>
+              </div>
+              <div class="engraving-input-group">
+                <input 
+                  type="text" 
+                  id="engravingInput" 
+                  maxlength="14" 
+                  placeholder="Enter name or monogram (max 14 chars)" 
+                  value="YOUR NAME"
+                />
+                <button type="button" id="clearEngravingBtn" class="clear-input-btn" title="Clear Engraving">&times;</button>
+              </div>
+              <span class="engraving-hint">Laser-etched directly into the stainless steel substrate. Permanently smudge-proof.</span>
+            </div>
+
+            <!-- Customizer Action -->
+            <div class="config-actions">
+              <button class="btn btn-primary btn-block btn-lg" id="addCustomBottleToCart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>Add Customized Bottle — <strong id="btnSummaryPrice">$42.00</strong></span>
+              </button>
+              <div class="config-guarantee">
+                <span>✓ Lifetime Leakproof Guarantee</span>
+                <span>✓ 30-Day Risk-Free Trial</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Product Catalog Grid -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">CATALOGUE</span>
+          <h2 class="section-title">Engineered Hydration Vessels</h2>
+          <p class="section-subtitle">
+            Every bottle is rigorously drop-tested, vacuum-sealed, and backed by a lifetime performance warranty.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs-wrapper">
+          <div class="filter-tabs" id="catalogFilters">
+            <button class="filter-btn active" data-filter="all">All Models</button>
+            <button class="filter-btn" data-filter="insulated">Vacuum Insulated</button>
+            <button class="filter-btn" data-filter="smart">Smart UV-C Tech</button>
+            <button class="filter-btn" data-filter="tumblers">Tumblers & Travel</button>
+            <button class="filter-btn" data-filter="accessories">Lids & Accessories</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Cards Grid -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Populated dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Thermal Performance Simulator -->
+    <section class="thermal-section" id="thermal-sim">
+      <div class="container">
+        <div class="thermal-card">
+          <div class="thermal-info">
+            <span class="section-badge badge-cold">36-HOUR LAB BENCHMARK</span>
+            <h2 class="thermal-title">Interactive Thermal Retention Simulator</h2>
+            <p class="thermal-desc">
+              Drag the timeline slider to simulate temperature behavior inside AURA's triple-wall 
+              vacuum chamber compared to ordinary single-wall metal and disposable plastic.
+            </p>
+
+            <!-- Time Slider -->
+            <div class="thermal-slider-wrapper">
+              <div class="slider-header">
+                <span class="slider-label">Hours Elapsed Since Fill:</span>
+                <span class="slider-value" id="simHoursDisplay">0 Hours (Fresh Ice Water)</span>
+              </div>
+              <input 
+                type="range" 
+                id="thermalSlider" 
+                min="0" 
+                max="36" 
+                value="0" 
+                step="1" 
+                class="custom-range-slider"
+              />
+              <div class="slider-ticks">
+                <span>0h (Start)</span>
+                <span>12h</span>
+                <span>24h</span>
+                <span>36h (Benchmark)</span>
+              </div>
+            </div>
+
+            <!-- Temperature Results Comparison Cards -->
+            <div class="thermal-comparison-grid">
+              <!-- AURA Bottle -->
+              <div class="comparison-card aura-card">
+                <div class="comp-badge">AURA FrostLock™</div>
+                <div class="comp-temp" id="auraTempDisplay">34°F / 1°C</div>
+                <div class="comp-status" id="auraStatusDisplay">❄️ Crisply Iced</div>
+                <div class="comp-bar-wrapper">
+                  <div class="comp-bar aura-bar" id="auraTempBar" style="width: 10%;"></div>
+                </div>
+              </div>
+
+              <!-- Standard Single Wall -->
+              <div class="comparison-card steel-card">
+                <div class="comp-badge">Generic Single-Wall</div>
+                <div class="comp-temp" id="steelTempDisplay">34°F / 1°C</div>
+                <div class="comp-status" id="steelStatusDisplay">❄️ Chilled</div>
+                <div class="comp-bar-wrapper">
+                  <div class="comp-bar steel-bar" id="steelTempBar" style="width: 10%;"></div>
+                </div>
+              </div>
+
+              <!-- Plastic Bottle -->
+              <div class="comparison-card plastic-card">
+                <div class="comp-badge">Single-Use Plastic</div>
+                <div class="comp-temp" id="plasticTempDisplay">34°F / 1°C</div>
+                <div class="comp-status" id="plasticStatusDisplay">❄️ Chilled</div>
+                <div class="comp-bar-wrapper">
+                  <div class="comp-bar plastic-bar" id="plasticTempBar" style="width: 10%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Thermal Graphic Diagram -->
+          <div class="thermal-visual">
+            <div class="frost-meter-card">
+              <div class="frost-meter-circle">
+                <div class="meter-inner">
+                  <span class="meter-icon" id="frostIcon">❄️</span>
+                  <span class="meter-number" id="frostDegreeNumber">34°</span>
+                  <span class="meter-sub">Inside Temperature</span>
+                </div>
+              </div>
+              <div class="frost-verdict">
+                <h4 id="frostVerdictTitle">Sub-Zero Retention</h4>
+                <p id="frostVerdictText">AURA copper barrier reflects radiant heat away, preserving icy refreshment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering & Technology Deep Dive -->
+    <section class="technology-section" id="technology">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">MATERIALS ARCHITECTURE</span>
+          <h2 class="section-title">Built Without Compromise</h2>
+          <p class="section-subtitle">
+            Every millimeter is crafted for indestructible longevity, optimal ergonomic grip, and sanitary perfection.
+          </p>
+        </div>
+
+        <div class="tech-features-grid">
+          <div class="tech-card">
+            <div class="tech-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polyline>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="tech-card-title">Triple-Wall TempShield™</h3>
+            <p class="tech-card-desc">
+              Two walls of 18/8 food-grade stainless steel enveloped around a high-vacuum chamber with an inner copper radiant barrier.
+            </p>
+            <ul class="tech-card-list">
+              <li>Eliminates bottle sweat and external condensation</li>
+              <li>Protects hands from scorching liquids</li>
+              <li>Keeps liquids chilled up to 36 hours</li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m4.93 4.93 4.24 4.24"></path>
+                <path d="m14.83 9.17 4.24-4.24"></path>
+                <path d="m14.83 14.83 4.24 4.24"></path>
+                <path d="m9.17 14.83-4.24 4.24"></path>
+              </svg>
+            </div>
+            <h3 class="tech-card-title">PureTaste™ Ceramic Shield</h3>
+            <p class="tech-card-desc">
+              An ultra-smooth internal ceramic lining ensures your coffee, kombucha, electrolyte mix, or spring water tastes purely authentic.
+            </p>
+            <ul class="tech-card-list">
+              <li>Zero metallic taste or odor retention</li>
+              <li>Acidic drink safe (lemon water & wine)</li>
+              <li>Stain-resistant glass-smooth surface</li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="tech-card-title">TrueSeal™ 360° Leakproof</h3>
+            <p class="tech-card-desc">
+              Dual silicone gasket engineering rated up to 4 bars of internal pressure. Toss it in your backpack with zero leak anxiety.
+            </p>
+            <ul class="tech-card-list">
+              <li>Food-grade medical silicone seals</li>
+              <li>Drop-tested from 6 feet onto concrete</li>
+              <li>Integrated ergonomic soft-touch finger loop</li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <h3 class="tech-card-title">Smart UV-C Self-Purification</h3>
+            <p class="tech-card-desc">
+              Our optional smart cap eradicates 99.999% of bacteria, viruses, and bio-contaminants at 280nm UV-C wavelength in 90 seconds.
+            </p>
+            <ul class="tech-card-list">
+              <li>Automated self-cleaning every 2 hours</li>
+              <li>Waterproof magnetic contact charger</li>
+              <li>Up to 30 days of battery life per charge</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eco-Impact Calculator Section -->
+    <section class="eco-section" id="eco-impact">
+      <div class="container">
+        <div class="eco-wrapper">
+          <div class="eco-header text-center">
+            <span class="section-badge badge-green">SUSTAINABILITY PLEDGE</span>
+            <h2 class="section-title">Your Personal Plastic Elimination Impact</h2>
+            <p class="section-subtitle">
+              Every AURA bottle eliminates thousands of single-use plastic bottles from oceans and landfills over its lifetime.
+            </p>
+          </div>
+
+          <div class="eco-calculator-card">
+            <div class="calculator-input-box">
+              <label for="plasticRange" class="calc-label">
+                How many disposable plastic water/beverage bottles do you or your household buy per day?
+              </label>
+              <div class="counter-control">
+                <button type="button" class="counter-btn" id="btnMinusBottle" aria-label="Decrease bottles">-</button>
+                <span class="counter-number" id="bottleCountVal">2</span>
+                <span class="counter-unit">bottles / day</span>
+                <button type="button" class="counter-btn" id="btnPlusBottle" aria-label="Increase bottles">+</button>
+              </div>
+              <input 
+                type="range" 
+                id="plasticRange" 
+                min="1" 
+                max="10" 
+                value="2" 
+                step="1" 
+                class="custom-range-slider"
+              />
+            </div>
+
+            <!-- Eco Impact Results -->
+            <div class="eco-stats-grid">
+              <div class="eco-stat-item">
+                <div class="eco-stat-icon">🚯</div>
+                <div class="eco-stat-val" id="statBottlesEliminated">730</div>
+                <div class="eco-stat-label">Plastic Bottles Prevented / Year</div>
+              </div>
+
+              <div class="eco-stat-item">
+                <div class="eco-stat-icon">💵</div>
+                <div class="eco-stat-val" id="statMoneySaved">$1,460</div>
+                <div class="eco-stat-label">Average Annual Dollars Saved</div>
+              </div>
+
+              <div class="eco-stat-item">
+                <div class="eco-stat-icon">🌱</div>
+                <div class="eco-stat-val" id="statCo2Saved">59.8 kg</div>
+                <div class="eco-stat-label">CO2 Greenhouse Emissions Avoided</div>
+              </div>
+            </div>
+
+            <div class="eco-cta-box text-center">
+              <p>Join over <strong>120,000+</strong> AURA custodians who have diverted over 45 Million plastic bottles worldwide.</p>
+              <a href="#products" class="btn btn-primary">Make The Switch Today</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verified Customer Reviews Section -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">VOICES OF AURA</span>
+          <h2 class="section-title">Tested Across Mountains, Gyms & Desks</h2>
+          <p class="section-subtitle">Real feedback from verified adventurers, commuters, and hydration purists.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "Left this in my hot car parked in Arizona for 7 hours under 105°F heat. Came back expecting lukewarm water—the ice cubes inside were still clinking. Absolute game changer."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar" style="background: #3b82f6;">MK</div>
+              <div class="author-details">
+                <span class="author-name">Marcus K.</span>
+                <span class="author-tag">Verified Buyer • Daily 750ml (Obsidian)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "The ceramic lining is the real secret. Every other stainless bottle makes water taste like sucking on a penny. AURA tastes like crisp mountain stream water. Plus the custom engraving is super sleek."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar" style="background: #10b981;">SL</div>
+              <div class="author-details">
+                <span class="author-name">Sarah Lindqvist</span>
+                <span class="author-tag">Verified Buyer • UV-Pure 600ml (Arctic)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "I bought 4 for our mountain expedition team. Completely leakproof in our gear bags, rugged powder coating that hasn't chipped after being dropped on granite rocks."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar" style="background: #f59e0b;">DR</div>
+              <div class="author-details">
+                <span class="author-name">David R.</span>
+                <span class="author-tag">Verified Buyer • Explorer 1200ml (Alpine)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="faq-section" id="faq">
+      <div class="container max-w-lg">
+        <div class="section-header text-center">
+          <span class="section-badge">ANSWERS</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+          <div class="faq-item active">
+            <button class="faq-question" aria-expanded="true">
+              <span>Is the AURA bottle dishwasher safe?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! All AURA bottle bodies, straw lids, chug caps, and fruit infusers are 100% top-rack dishwasher safe. For the Smart UV-C cap, we recommend wiping the waterproof exterior with a damp cloth to protect the magnetic charging terminals.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does the PureTaste™ ceramic lining work?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Our ceramic shield is molecularly bonded to the inner 18/8 stainless steel wall at 800°C. It creates an inert, non-porous glass-like barrier that prevents metallic leaching and flavor ghosting—so your afternoon iced matcha won't taste like morning dark roast espresso.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is covered under the Lifetime Warranty?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We cover vacuum insulation integrity failure, cap seal defects, handle breaks, and manufacturer welds for life. If your bottle ever ceases to keep liquids cold or leaks due to a manufacturing defect, we replace it free of charge.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do AURA bottles fit standard car cup holders?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                The Daily Hydrator (750ml), The UV-Pure (600ml), and The Aero Tumbler (900ml) are engineered with a tapered base specifically designed to fit 99% of modern automobile and gym equipment cup holders.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter / Discount Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-content text-center">
+            <span class="section-badge">JOIN THE MOVEMENT</span>
+            <h2 class="newsletter-title">Unlock 15% Off Your First Bottle</h2>
+            <p class="newsletter-desc">
+              Subscribe to receive exclusive limited-edition color drops, hydration science guides, and private VIP warehouse access.
+            </p>
+
+            <form class="newsletter-form" id="newsletterForm">
+              <input 
+                type="email" 
+                id="newsletterEmail" 
+                placeholder="Enter your email address" 
+                required 
+              />
+              <button type="submit" class="btn btn-primary">Claim 15% Code</button>
+            </form>
+            <div id="newsletterSuccess" class="newsletter-success-msg hidden">
+              🎉 Welcome to AURA! Your 15% off promo code is: <strong class="promo-code-click" id="couponReveal">AURA15</strong> (Copied to clipboard!)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <aside class="cart-drawer-overlay" id="cartOverlay">
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <div class="cart-header-title">
+          <h3>Your Hydration Cart</h3>
+          <span class="cart-count-pill" id="cartDrawerCount">0 Items</span>
+        </div>
+        <button class="cart-close-btn" id="closeCartBtn" aria-label="Close Cart">&times;</button>
+      </div>
+
+      <!-- Free Shipping Progress -->
+      <div class="shipping-progress-container">
+        <div class="shipping-progress-text" id="shippingProgressText">
+          Add <strong>$50.00</strong> more for Free Worldwide Shipping!
+        </div>
+        <div class="shipping-progress-track">
+          <div class="shipping-progress-bar" id="shippingProgressBar" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Cart Item List -->
+      <div class="cart-items-list" id="cartItemsList">
+        <!-- Injected via script.js -->
+      </div>
+
+      <!-- Cart Footer -->
+      <div class="cart-footer">
+        <div class="promo-input-group">
+          <input type="text" id="cartPromoInput" placeholder="Enter coupon code (e.g. AURA15)" />
+          <button type="button" class="btn btn-sm btn-outline" id="applyPromoBtn">Apply</button>
+        </div>
+        <div class="cart-subtotal-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotalVal">$0.00</span>
+        </div>
+        <div class="cart-subtotal-row discount-row hidden" id="cartDiscountRow">
+          <span>Promo Discount (15% OFF)</span>
+          <span class="discount-val" id="cartDiscountVal">-$0.00</span>
+        </div>
+        <div class="cart-subtotal-row">
+          <span>Estimated Shipping</span>
+          <span id="cartShippingVal">$0.00</span>
+        </div>
+        <div class="cart-total-row">
+          <span>Total</span>
+          <span id="cartTotalVal">$0.00</span>
+        </div>
+
+        <button class="btn btn-primary btn-block btn-lg" id="checkoutBtn">
+          Secure Checkout
+        </button>
+        <p class="cart-guarantee-note">🔒 Encrypted 256-Bit SSL Checkout • Free 30-Day Returns</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Quick View Product Modal -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeProductModal" aria-label="Close Modal">&times;</button>
+      <div class="modal-body-grid">
+        <div class="modal-image-col">
+          <img src="" alt="" id="modalImg" class="modal-product-img" />
+        </div>
+        <div class="modal-details-col">
+          <span class="modal-category" id="modalCategory">Category</span>
+          <h3 class="modal-title" id="modalTitle">Product Title</h3>
+          <div class="modal-rating-row">
+            <span class="modal-stars">★★★★★</span>
+            <span class="modal-reviews-count" id="modalReviews">4.9 (1,240 reviews)</span>
+          </div>
+          <div class="modal-price" id="modalPrice">$42.00</div>
+          <p class="modal-description" id="modalDescription">Product description here.</p>
+
+          <div class="modal-spec-list" id="modalSpecs">
+            <!-- Injected via script.js -->
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn btn-primary btn-block" id="modalAddToCart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Success Modal -->
+  <div class="modal-backdrop" id="checkoutSuccessModal">
+    <div class="modal-card text-center success-modal-card">
+      <div class="success-icon">🎉</div>
+      <h2>Order Confirmed!</h2>
+      <p class="success-order-num">Order Reference: <strong id="orderRefCode">#AURA-9824</strong></p>
+      <p class="success-desc">
+        Thank you for choosing AURA. We're packing your custom hydration gear with care. A confirmation and tracking code has been dispatched.
+      </p>
+      <div class="success-actions">
+        <button class="btn btn-primary" id="btnContinueShopping">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Element -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">AURA<span class="logo-dot">.</span></div>
+        <p class="footer-mission">
+          Engineering the future of personal hydration. Zero compromise between thermodynamic performance, aesthetic luxury, and ecological stewardship.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="YouTube">YouTube</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Vessels</h4>
+        <ul>
+          <li><a href="#customizer">Customizer Studio</a></li>
+          <li><a href="#products">The Daily (750ml)</a></li>
+          <li><a href="#products">The Explorer (1200ml)</a></li>
+          <li><a href="#products">The UV-Pure (600ml)</a></li>
+          <li><a href="#products">Aero Tumbler (900ml)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Technology</h4>
+        <ul>
+          <li><a href="#thermal-sim">36h Cold Simulator</a></li>
+          <li><a href="#technology">PureTaste™ Ceramic</a></li>
+          <li><a href="#technology">FrostLock™ Vacuum Core</a></li>
+          <li><a href="#technology">UV-C Smart Cap</a></li>
+          <li><a href="#eco-impact">Plastic Free Pledge</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support & Warranty</h4>
+        <ul>
+          <li><a href="#faq">FAQ & Care Instructions</a></li>
+          <li><a href="#">Lifetime Warranty Claim</a></li>
+          <li><a href="#">Shipping & Tracking</a></li>
+          <li><a href="#">Wholesale & Corporate</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 AURA Hydration Technologies Inc. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sustainability Report</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
