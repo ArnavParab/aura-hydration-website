@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA | Backend Admin & API Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0b0e14;
+      --card-bg: #141822;
+      --border: #232938;
+      --accent: #3b82f6;
+      --accent-cyan: #06b6d4;
+      --accent-green: #10b981;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --font: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      padding: 2rem;
+      line-height: 1.5;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .badge-online {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-green);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green);
+      box-shadow: 0 0 8px var(--accent-green);
+    }
+
+    .header-links { display: flex; gap: 1rem; align-items: center; }
+    .btn {
+      padding: 0.5rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { opacity: 0.9; }
+    .btn-outline { background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: #fff; }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+    /* Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .metric-title { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .metric-value { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; margin-top: 0.25rem; }
+
+    /* API Endpoints Bar */
+    .api-bar {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .api-tag {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      background: rgba(255,255,255,0.06);
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .api-tag:hover { background: rgba(6, 182, 212, 0.15); }
+
+    /* Section Cards */
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 10px 14px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: middle;
+    }
+
+    .order-id { font-family: var(--font-mono); font-weight: 600; color: var(--accent-cyan); }
+    .badge-status {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--accent-green);
+    }
+
+    .empty-msg {
+      text-align: center;
+      padding: 2.5rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 900px) {
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .metrics-grid { grid-template-columns: 1fr; }
+      body { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="brand-title">
+        <span>AURA Backend Control</span>
+        <span class="badge-online"><span class="dot"></span> LIVE ON PORT 5000</span>
+      </div>
+      <div class="header-links">
+        <a href="/" class="btn btn-outline">← Back to Website</a>
+        <button id="refreshBtn" class="btn btn-primary">Refresh Data</button>
+      </div>
+    </header>
+
+    <!-- Top Metrics Overview -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-title">Total Revenue</div>
+        <div class="metric-value" id="statRevenue">$0.00</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Total Orders Placed</div>
+        <div class="metric-value" id="statOrders">0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Bottles Sold</div>
+        <div class="metric-value" id="statBottles">0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Newsletter VIPs</div>
+        <div class="metric-value" id="statSubscribers">0</div>
+      </div>
+    </div>
+
+    <!-- Quick API Endpoints -->
+    <div class="api-bar">
+      <span style="font-size: 0.85rem; color: var(--text-muted); margin-right: 0.5rem;">Explore REST Endpoints:</span>
+      <a href="/api/health" target="_blank" class="api-tag">GET /api/health</a>
+      <a href="/api/products" target="_blank" class="api-tag">GET /api/products</a>
+      <a href="/api/orders" target="_blank" class="api-tag">GET /api/orders</a>
+      <a href="/api/stats" target="_blank" class="api-tag">GET /api/stats</a>
+    </div>
+
+    <!-- Live Orders Database Table -->
+    <div class="section-card">
+      <h2>
+        <span>📦 Incoming Customer Orders (Persisted in /data/orders.json)</span>
+        <button class="btn btn-outline" id="testOrderBtn">+ Place Test Order</button>
+      </h2>
+      <div style="overflow-x: auto;">
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>Order Ref</th>
+              <th>Date & Time</th>
+              <th>Items & Specs</th>
+              <th>Customer</th>
+              <th>Total Paid</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="ordersBody">
+            <tr><td colspan="6" class="empty-msg">Loading orders from backend database...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Newsletter Subscribers -->
+    <div class="section-card">
+      <h2>📬 Newsletter Subscribers (Persisted in /data/newsletter.json)</h2>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Subscriber Email</th>
+              <th>Subscribed At</th>
+              <th>Source</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="subscribersBody">
+            <tr><td colspan="4" class="empty-msg">No subscribers yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function loadBackendData() {
+      try {
+        // Fetch stats
+        const statsRes = await fetch('/api/stats');
+        const stats = await statsRes.json();
+
+        document.getElementById('statRevenue').textContent = `$${stats.totalRevenue.toFixed(2)}`;
+        document.getElementById('statOrders').textContent = stats.totalOrders;
+        document.getElementById('statBottles').textContent = stats.totalBottlesSold;
+        document.getElementById('statSubscribers').textContent = stats.subscribersCount;
+
+        // Fetch orders
+        const ordersRes = await fetch('/api/orders');
+        const ordersData = await ordersRes.json();
+        const ordersBody = document.getElementById('ordersBody');
+
+        if (!ordersData.orders || ordersData.orders.length === 0) {
+          ordersBody.innerHTML = `<tr><td colspan="6" class="empty-msg">No orders placed yet. Place an order on the website or click "+ Place Test Order" above!</td></tr>`;
+        } else {
+          ordersBody.innerHTML = ordersData.orders.map(order => {
+            const date = new Date(order.timestamp).toLocaleString();
+            const itemsSummary = order.items.map(i => `${i.quantity}x ${i.name} (${i.capacity || ''} ${i.color ? '• ' + i.color : ''} ${i.engraving ? '• Laser: "' + i.engraving + '"' : ''})`).join('<br/>');
+            
+            return `
+              <tr>
+                <td class="order-id">${order.id}</td>
+                <td style="color: #94a3b8; font-size: 0.8rem;">${date}</td>
+                <td>${itemsSummary}</td>
+                <td>${order.customer?.name || 'Guest'}<br/><small style="color: #64748b;">${order.customer?.email || ''}</small></td>
+                <td><strong style="color: #fff;">$${order.pricing?.total?.toFixed(2) || '0.00'}</strong></td>
+                <td><span class="badge-status">${order.status}</span></td>
+              </tr>
+            `;
+          }).join('');
+        }
+
+        // Fetch health for subscriber details
+        const healthRes = await fetch('/api/health');
+        const healthData = await healthRes.json();
+
+      } catch (err) {
+        console.error('Failed to load backend data:', err);
+      }
+    }
+
+    // Place simulated test order
+    document.getElementById('testOrderBtn').addEventListener('click', async () => {
+      try {
+        const testOrder = {
+          items: [
+            {
+              id: "custom-test-1",
+              name: "Custom The Explorer Flask",
+              capacity: "1200ml / 40oz",
+              color: "Alpine Sage",
+              cap: "Straw Sports Lid",
+              engraving: "EXPEDITION-9",
+              price: 54.0,
+              quantity: 1
+            }
+          ],
+          discountCode: "AURA15",
+          customerInfo: {
+            name: "Alex Rivera",
+            email: "alex.rivera@example.com",
+            shippingMethod: "Complimentary Express"
+          }
+        };
+
+        const res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(testOrder)
+        });
+
+        const data = await res.json();
+        if (data.success) {
+          loadBackendData();
+        }
+      } catch (err) {
+        alert('Could not place test order. Make sure server is running!');
+      }
+    });
+
+    document.getElementById('refreshBtn').addEventListener('click', loadBackendData);
+
+    // Initial load
+    loadBackendData();
+  </script>
+</body>
+</html>
