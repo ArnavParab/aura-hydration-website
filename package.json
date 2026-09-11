@@ -1,0 +1,18 @@
+{
+  "name": "my-first-time",
+  "version": "1.0.0",
+  "description": "A sleek, modern, high-converting e-commerce advertising website built for **AURA**, an innovative premium insulated & smart water bottle brand.",
+  "main": "script.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
